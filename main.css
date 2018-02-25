@@ -18,11 +18,15 @@
   animation: move 35s linear infinite;
 }
 #bub1{
-    animation: appear 2s forwards;
+    animation: appear 1s forwards;
 }
 #bub2{
     animation: appear 2s forwards;
-    animation-delay:2s;
+    animation-delay:1s;
+}
+#bub3{
+    animation: appear 2s forwards;
+    animation-delay: 3s;
 }
 
 @keyframes move{
