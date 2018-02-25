@@ -4,9 +4,23 @@
     "version": "1.0",
     "manifest_version": 2,
         "browser_action": {
+            "default_title": "Browser Buddy!",
             "default_icon": "MM.Violin.png",
-            "default_popup": "popup.html" 
+            "default_popup": "popup.html"
+            
     } , 
+    "chrome_url_overrides": {
+        "newtab": "override.html"
+    },
+    "permissions": [
+        "activeTab"
+    ],
+    "background": {
+        "scripts": [
+            "popup.js"
+        ],
+        "persistent": false
+    },  
     "commands": {
         "_execute_browser_action": {
             "suggested_key": {
