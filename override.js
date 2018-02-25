@@ -48,7 +48,8 @@ function mag(){
                     document.getElementById("browse").value = "You should really check out the chat";
                 }
                 else{
-                    
+                    document.getElementById("chatWindow").innerHTML = "I'm glad you feel good! Click on this link:https://www.ecosia.org/images?q=pugs";
+                
                 }
             })
             .fail(function () {
