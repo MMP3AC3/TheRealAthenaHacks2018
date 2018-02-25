@@ -24,3 +24,11 @@
     background-position: 1000px 100px, 1200px 200px, 1100px 150px;
   }
 }
+@keyframes changeGrad{
+    0%{
+       background: #c9e8ff; 
+    }
+    100%{
+       background: #ffc8c6; 
+    }
+}
