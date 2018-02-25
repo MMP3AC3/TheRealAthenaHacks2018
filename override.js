@@ -44,11 +44,15 @@ function mag(){
                 //alert("success");
                 console.log(data["documents"][0]["score"]);
                 var inputNum = data["documents"][0]["score"];
-                if(inputNum <.40){
-                    document.getElementById("browse").value = "You should really check out the chat";
+                if(inputNum <.40&&inputNum>.01){
+                    document.getElementById("browse").value = "You should look at the chat bot!";
+                }
+                else if (inputNum < .01) {
+                    window.open("https://suicidepreventionlifeline.org/");
+                    document.getElementById("browse").value = "You should look at the chat bot!";
                 }
                 else{
-                    document.getElementById("chatWindow").innerHTML = "I'm glad you feel good! Click on this link:https://www.ecosia.org/images?q=pugs";
+                    document.getElementById("happy").innerHTML = "I'm glad you feel good! Click on this link:https://www.ecosia.org/images?q=pugs";
                 
                 }
             })
@@ -61,4 +65,5 @@ function mag(){
     var gSearch = "https://www.google.com/search?q=" + result;
     window.open(gSearch, '_blank');
     chrome.tabs.create("popup.html");
+    
 }
