@@ -52,7 +52,7 @@ function mag(){
                     document.getElementById("browse").value = "You should look at the chat bot!";
                 }
                 else{
-                    document.getElementById("happy").innerHTML = "I'm glad you feel good! Click on this link:https://www.ecosia.org/images?q=pugs";
+                    document.getElementById("happy").innerHTML = "I'm glad you feel good! Click on this link:https://www.youtube.com/watch?v=y6Sxv-sUYtM";
                 
                 }
             })
