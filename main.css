@@ -27,8 +27,14 @@
 #bub3{
     animation: appear 2s forwards;
     animation-delay: 3s;
-    text-align: bottom;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 150px;
 
+}
+#chatwindow{
+    position: fixed;
+    overflow-y: scroll;
 }
 .clouds{
   position: relative;

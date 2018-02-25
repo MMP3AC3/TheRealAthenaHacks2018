@@ -1,36 +1,48 @@
 document.getElementById("bub3").addEventListener("click", quote);
 function quote() {
-    var arr = ["You've got this!", "You gonna ace today!", "Make the most of your 86,400!!"];
+    var arr = ["You've got this!", 
+    "You gonna ace today!", 
+    "Make the most of your 86,400!!", 
+    "You're Beautiful!!",
+    "Just be confident!",
+    "Don't be afraid to be a badass!",
+    ];
     var num = Math.floor((arr.length)*Math.random());
     var hey = arr[num];
     document.getElementById("bub3").innerHTML = hey;
 }
-(function () {
+$(function () {
     var params = {
-        // Request parameters
+        "documents": [
+            {
+                "language": "en",   
+                "id": 1,
+                "text": browse.value
+            }
+        ]
     };
     $.ajax({
-        url: "https://westus.api.cognitive.microsoft.com/text/analytics/v2.0/sentiment?" + $.param(params),
+        url: "https://westcentralus.api.cognitive.microsoft.com/text/analytics/v2.0/sentiment?" + $.param(params),
         beforeSend: function (xhrObj) {
             // Request headers
             xhrObj.setRequestHeader("Content-Type", "application/json");
-            xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", "{subscription key}");
+            xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", "8f7f16b82fd34fe4989932215f62c821");
         },
         type: "POST",
         // Request body
-        data: {
-            "documents": [
+        // data:"{body}",
+        data: [
                 {
                     "language": "en",
                     "id": 1,
-                    "text": browser.innerHTML
+                    "text": browse.value
                 }
             ]
         }
 
-    })
+    )
         .done(function (data) {
-            console.log(browse.innerHTML);
+            console.log(browse.value);
             alert("success");
         })
         .fail(function () {
@@ -39,12 +51,13 @@ function quote() {
 });
 document.getElementById("mag").addEventListener("click", mag);
 function mag(){
-    var result = document.getElementById("browse").innerHTML;
-//     for (i = 0; i < result.length; i++) {
-//         if i < (result.length) - 1
-//    var text += cars[i] + "+";
-// else
-//         var text += cars[i]
-//     }
+    
+    var result = document.getElementById("browse").value;
+    console.log(result);
     var gSearch = "https://www.google.com/search?q=" + result;
+    window.open(gSearch, '_blank');
+    chrome.tabs.create("popup.html");
+   
+
+    
 }
