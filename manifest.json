@@ -1,0 +1,20 @@
+{
+    "name": "Browser Buddies",
+    "description": "Base Level Extension",
+    "version": "1.0",
+    "manifest_version": 2,
+        "browser_action": {
+            "default_icon": "MM.Violin.png",
+            "default_popup": "popup.html" 
+    } , 
+    "commands": {
+        "_execute_browser_action": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+F",
+                "mac": "MacCtrl+Shift+F"
+            },
+            "description": "Opens popup.html"
+        }
+    }
+        
+}
