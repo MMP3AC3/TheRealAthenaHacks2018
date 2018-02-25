@@ -27,14 +27,14 @@
 #bub3{
     animation: appear 2s forwards;
     animation-delay: 3s;
-    text-align: center;
+    text-align: bottom;
 
 }
 .clouds{
   position: relative;
   height: 600px;
   background: url(cloud.png);
-  background: url(cloud.png) 0 200px;
+  background: url(Cloud-icon.png) 20 200px;
   animation: move 35s linear infinite;
 }
 @keyframes move{
