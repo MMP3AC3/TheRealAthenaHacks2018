@@ -30,10 +30,21 @@ function quote() {
 
     })
         .done(function (data) {
-            console.log(browser.innerHTML);
+            console.log(browse.innerHTML);
             alert("success");
         })
         .fail(function () {
             alert("error");
         });
 });
+document.getElementById("mag").addEventListener("click", mag);
+function mag(){
+    var result = document.getElementById("browse").innerHTML;
+//     for (i = 0; i < result.length; i++) {
+//         if i < (result.length) - 1
+//    var text += cars[i] + "+";
+// else
+//         var text += cars[i]
+//     }
+    var gSearch = "https://www.google.com/search?q=" + result;
+}

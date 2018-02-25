@@ -1,10 +1,11 @@
 <html>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
 <body style="width:500px;height:500px;" id = "body">
     <link rel = "stylesheet" href = "main.css">
 <title>Browser Buddy!</title>
 <h1 id="overrideHEAD" onclick="quote()">Welcome to Browser Buddy!</h1>
-<input id="browse" placeholder="Search your Browser!!" style="display: block;width: 200px; height: 30px;z-index: 100;">
+<input id="browse" placeholder="Search your Browser!!" style="display: inline-block;width: 200px; height: 30px;z-index: 100;">
+<img src = "mag_glass.png" id = "mag"style = "display: inline-block;width: 30px; height: 30px;">
     <div class="clouds" style="z-index:-100">
     
     <div style="width: 500px; height: 200px; border-radius: 60%;border:1px solid black; margin-left:48%; margin-bottom:-5%; opacity: 0.0;" 
@@ -19,6 +20,17 @@
     <img src="tree_branch.png" style="width:750px; height:100px;display:block;z-index:100;">
     </div>
 </body>
+<script src = "jquery.min.js">
+    // var xhr = new XMLHttpRequest();
+    // xhr.open("GET", "http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js", true);
+    // xhr.onreadystatechange = function () {
+    //     if (xhr.readyState == 4) {
+    //         // JSON.parse does not evaluate the attacker's scripts.
+    //         var resp = JSON.parse(xhr.responseText);
+    //     }
+    // }
+    // xhr.send();
+</script>
 <script type="text/javascript" src = "override.js"></script>
 </html>
 

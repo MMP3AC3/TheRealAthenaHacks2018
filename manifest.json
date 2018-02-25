@@ -13,7 +13,8 @@
         "newtab": "override.html"
     },
     "permissions": [
-        "activeTab"
+        "activeTab",
+        "http://ajax.googleapis.com/"
     ],
     "background": {
         "scripts": [
@@ -29,7 +30,5 @@
             },
             "description": "Opens popup.html"
         }
-    }
-       
-        
+    }       
 }
