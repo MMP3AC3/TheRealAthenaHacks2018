@@ -1,3 +1,6 @@
 #body{
-    background: linear-gradient(skyblue,pink);
+    background: linear-gradient(#c9e8ff,#ffc8c6);
+}
+#bodyPop{
+    background: linear-gradient(#c9e8ff,#ffc8c6);
 }
