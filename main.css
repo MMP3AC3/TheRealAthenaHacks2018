@@ -32,10 +32,7 @@
     padding-top: 150px;
 
 }
-#chatwindow{
-    position: fixed;
-    overflow-y: scroll;
-}
+
 .clouds{
   position: relative;
   height: 600px;

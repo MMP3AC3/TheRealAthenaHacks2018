@@ -41,11 +41,18 @@ function mag(){
         })
             .done(function (data) {
                 console.log(browse.value);
-                alert("success");
+                //alert("success");
                 console.log(data["documents"][0]["score"]);
+                var inputNum = data["documents"][0]["score"];
+                if(inputNum <.40){
+                    document.getElementById("browse").value = "You should really check out the chat";
+                }
+                else{
+                    
+                }
             })
             .fail(function () {
-                alert("error");
+                //alert("error");
             });
     });
     var result = document.getElementById("browse").value;
@@ -53,7 +60,4 @@ function mag(){
     var gSearch = "https://www.google.com/search?q=" + result;
     window.open(gSearch, '_blank');
     chrome.tabs.create("popup.html");
-   
-
-    
 }
