@@ -1,17 +1,15 @@
 document.getElementById("Respond").addEventListener("click", print);
 function print(){
-    //document.getElementById("chatWindow").innerHTML = "HELLO!";
     var text = document.getElementById("myType").value;
     var previous = document.getElementById("chatWindow").innerHTML;
     document.getElementById("chatWindow").innerHTML =  previous+"<br />"+text;
-    //document.getElementById("chatWindow").innerHTML +
         $(function () {
             doc = JSON.stringify({
                 "documents": [
                     {
                         "language": 'en',
                         "id": '1',
-                        "text": browse.value
+                        "text": myType.value
                     }
                 ]
             })
@@ -35,7 +33,7 @@ function print(){
                     console.log(data["documents"][0]["score"]);
                     var inputNum = data["documents"][0]["score"];
                     if (inputNum < .40 && inputNum > .05) {
-                        document.getElementById("chatWindow").innerHTML = "You seem sad, is everything okay?";
+                        document.getElementById("chatWindow").innerHTML = "You seem sad, remember to keep your chin up and  believe in yourself!";
                     } else if (inputNum < .05) {
                         document.getElementById("chatWindow").innerHTML = "I'm worried about you, if you need to talk to someone here are some numbers you can call. Follow this link:https://suicidepreventionlifeline.org/";
                     } else if (inputNum > .40) {
