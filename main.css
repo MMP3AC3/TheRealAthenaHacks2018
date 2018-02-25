@@ -27,6 +27,8 @@
 #bub3{
     animation: appear 2s forwards;
     animation-delay: 3s;
+    text-align: center;
+
 }
 
 @keyframes move{
