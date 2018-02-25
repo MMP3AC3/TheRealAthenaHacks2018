@@ -1,5 +1,6 @@
 #body{
-    background: linear-gradient(#c9e8ff,#ffc8c6);
+   /* background: linear-gradient(#c9e8ff,#ffc8c6);*/
+   animation: changeGrad 7s alternate-reverse infinite;
 }
 #bodyPop{
     background: linear-gradient(#c9e8ff,#ffc8c6);
@@ -16,6 +17,14 @@
 
   animation: move 35s linear infinite;
 }
+#bub1{
+    animation: appear 2s forwards;
+}
+#bub2{
+    animation: appear 2s forwards;
+    animation-delay:2s;
+}
+
 @keyframes move{
  0% {
     background-position: 0 75px, 0 175px, 100px 125px;
@@ -31,4 +40,16 @@
     100%{
        background: #ffc8c6; 
     }
+}
+@keyframes appear{
+    0%{
+        opacity: 0.0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1.0;
+    }
+
 }
